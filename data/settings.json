@@ -1,0 +1,11 @@
+{
+  "theme": "default", 
+  "tutorial_completed": false, 
+  "language": "zh", 
+  "fps_limit": 60, 
+  "sound_volume": 0.7, 
+  "particle_enabled": true, 
+  "enable_3d_sound": true, 
+  "music_volume": 0.5, 
+  "show_fps": false
+}

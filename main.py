@@ -1,67 +1,40 @@
-#!/usr/bin/env python3
 """
 1024 Game - Main Entry Point
-A terminal-based 1024 number sliding game
+Starts the game with the GameLoop
+"""
+
+# -*- coding: utf-8 -*-
+"""
+1024 Game - Main Entry Point
+Starts the game with the GameLoop
 """
 
 import sys
 import os
 
-# Add current directory to path for imports
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# Ensure core module is in path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'core'))
 
-from game import Game
-from ui import UI
+try:
+    from core.game_loop import GameLoop
+except ImportError as e:
+    print("Error importing GameLoop: %s" % e)
+    sys.exit(1)
 
 
 def main():
-    """Main game loop"""
+    """Main function to start the game"""
     try:
-        # Initialize game and UI
-        game = Game()
-        ui = UI()
-
-        # Display welcome message
-        ui.show_welcome()
-
-        # Main game loop
-        while True:
-            # Draw current game state
-            ui.draw_game(game)
-
-            # Check game state
-            if game.is_win():
-                ui.show_win_message(game.score)
-                break
-            elif game.is_game_over():
-                ui.show_game_over_message(game.score)
-                break
-
-            # Get user input
-            move = ui.get_input()
-
-            if move == 'quit':
-                ui.show_quit_message()
-                break
-            elif move == 'restart':
-                game.reset_game()
-                continue
-
-            # Process move
-            if move in ['up', 'down', 'left', 'right']:
-                if game.move(move):
-                    # Move was successful, add new tile
-                    game.add_random_tile()
-
-        # Save high score before exit
-        game.save_high_score()
-
+        game_loop = GameLoop()
+        game_loop.run()
     except KeyboardInterrupt:
-        print("\nGame interrupted. Goodbye!")
+        print("\nGame exited by user")
     except Exception as e:
-        print(f"An error occurred: {e}")
+        print("\nError running game: %s" % e)
+        import traceback
+        traceback.print_exc()
         sys.exit(1)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
