@@ -1,0 +1,33 @@
+{
+  "name": "Ocean",
+  "author": "System",
+  "version": "1.0",
+  "colors": {
+    "background": "#0d1b2a",
+    "grid": "#1b263b",
+    "empty": "#415a77",
+    "text_light": "#e0e1dd",
+    "text_dark": "#778da9",
+    "tile_2": "#00b4d8",
+    "tile_4": "#0077b6",
+    "tile_8": "#03045e",
+    "tile_16": "#023e8a",
+    "tile_32": "#0077b6",
+    "tile_64": "#0096c7",
+    "tile_128": "#00b4d8",
+    "tile_256": "#48cae4",
+    "tile_512": "#90e0ef",
+    "tile_1024": "#ade8f4",
+    "tile_2048": "#caf0f8",
+    "tile_super": "#ff9f1c",
+    "button": "#778da9",
+    "button_hover": "#91a7ff",
+    "button_pressed": "#5e60ce",
+    "accent": "#48cae4",
+    "success": "#06d6a0",
+    "warning": "#ffd166",
+    "danger": "#ef476f",
+    "info": "#118ab2"
+  },
+  "tile_values": {}
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Sunset",
+  "author": "System",
+  "version": "1.0",
+  "colors": {
+    "background": "#2d0036",
+    "grid": "#580066",
+    "empty": "#850096",
+    "text_light": "#ffd9da",
+    "text_dark": "#ff96a4",
+    "tile_2": "#ffb6b9",
+    "tile_4": "#f875aa",
+    "tile_8": "#ff6b9d",
+    "tile_16": "#c44569",
+    "tile_32": "#e74c3c",
+    "tile_64": "#ff4757",
+    "tile_128": "#ff6348",
+    "tile_256": "#ff7f50",
+    "tile_512": "#ffa502",
+    "tile_1024": "#ffd700",
+    "tile_2048": "#fff3cd",
+    "tile_super": "#ff00ff",
+    "button": "#f875aa",
+    "button_hover": "#ff6b9d",
+    "button_pressed": "#c44569",
+    "accent": "#ff6348",
+    "success": "#7bed9f",
+    "warning": "#ffd700",
+    "danger": "#ff4757",
+    "info": "#74b9ff"
+  },
+  "tile_values": {}
+}

@@ -1,0 +1,14 @@
+{
+  "name": "test_custom",
+  "author": "User",
+  "version": "1.0",
+  "colors": "Test Custom",
+  "tile_values": {
+    "background": "#1a1a2e",
+    "grid": "#16213e",
+    "empty": "#0f3460",
+    "tile_default": "#e94560",
+    "text_dark": "#ffffff",
+    "text_light": "#a8b5c0"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Imported Theme",
+  "colors": {
+    "background": "#ff0000",
+    "grid": "#00ff00",
+    "empty": "#0000ff",
+    "tile_default": "#ffff00",
+    "text_dark": "#ffffff",
+    "text_light": "#000000"
+  }
+}
