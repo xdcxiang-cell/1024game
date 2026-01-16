@@ -1,146 +1,207 @@
-# 1024 Game
+# 1024 Game 🎮
 
-A terminal-based 1024 number sliding game built with Python 3.
+一个使用Pygame开发的现代化图形界面2048数字滑动游戏。
 
-## 🎮 Game Rules
+## ✨ 主要特性
 
-- Use WASD or arrow keys to move tiles
-- Combine identical numbers by moving them together
-- Reach 1024 to win!
-- Game ends when no more moves are possible
+- 🎨 **主题系统** - 支持多主题切换，可自定义主题颜色
+- 📚 **教程系统** - 新手友好的游戏教程和进阶技巧
+- 🏆 **成就系统** - 追踪游戏成就和里程碑
+- 💾 **存档系统** - 自动保存游戏进度和最高分
+- 🎵 **音效系统** - 沉浸式的游戏音效反馈
+- 🎯 **平滑动画** - 流畅的方块移动和合并动画
+- 💡 **提示系统** - 智能提示帮助你获得更高分数
 
-## 🚀 Quick Start
+## 🚀 快速开始
 
-### Prerequisites
-- Python 3.8 or higher
+### 前置要求
 
-### Installation
-1. Clone or download the project
-2. Navigate to the project directory
-3. (Optional) Install colorama for colored output:
-   ```bash
-   pip install -r requirements.txt
-   ```
+- Python 3.8 或更高版本
+- Pygame 2.6+ 库
 
-### Running the Game
+### 安装步骤
+
+1. 克隆或下载项目
+2. 安装依赖：
+
 ```bash
-python main.py
+pip install -r requirements.txt
 ```
 
-## 🎯 Controls
+### 运行游戏
 
-- **W / ↑**: Move Up
-- **S / ↓**: Move Down
-- **A / ←**: Move Left
-- **D / →**: Move Right
-- **Q**: Quit Game
-- **R**: Restart Game
+```bash
+python game_launcher.py
+```
 
-## 📁 Project Structure
+## 🎮 游戏规则
+
+- 使用 **WASD** 或 **方向键** 移动方块
+- 当两个相同数字的方块相撞时会合并成为它们的和
+- 每次合并后会在空白位置随机出现一个新的2或4方块
+- 目标是创造出2048方块，但游戏不会在此结束
+- 当无法移动时游戏结束
+
+## 🎯 操作指南
+
+### 基础操作
+
+- **W / ↑**: 向上移动
+- **S / ↓**: 向下移动
+- **A / ←**: 向左移动
+- **D / →**: 向右移动
+- **ESC**: 返回主菜单
+- **R**: 重新开始
+- **U**: 撤销上一步
+
+### 菜单操作
+
+- **鼠标点击**: 选择菜单选项和按钮
+- **左右箭头**: 切换页面
+- **主题选择**: 在主题自定义器中选择不同主题
+
+## 📁 项目结构
 
 ```
-1024game/
-├── main.py              # Main entry point
-├── game.py              # Core game logic
-├── ui.py                # Terminal user interface
-├── utils.py             # Utility functions
+1024gameL2/
+├── game_launcher.py          # 游戏入口（图形界面版本）
+├── main.py                   # 旧版入口（终端版本）
+├── requirements.txt          # Python依赖
+├── requirements.md           # 详细需求说明
+├── README.md                 # 本文件
 ├── data/
-│   └── high_score.txt   # High score storage
-├── requirements.txt     # Python dependencies
-├── requirements.md      # Detailed requirements
-└── README.md           # This file
+│   └── high_score.txt        # 最高分存储
+├── src/
+│   ├── engine/               # 游戏引擎
+│   │   ├── constants.py      # 常量定义
+│   │   ├── game_engine.py    # 核心游戏逻辑
+│   │   ├── renderer.py       # 渲染系统
+│   │   ├── audio_system.py   # 音效系统
+│   │   └── particle_system.py # 粒子效果系统
+│   ├── menus/                # 菜单系统
+│   │   └── ui_manager.py     # UI管理器
+│   ├── utils/                # 工具模块
+│   │   ├── theme_manager.py  # 主题管理器
+│   │   ├── tutorial_manager.py # 教程管理器
+│   │   ├── achievement_manager.py # 成就管理器
+│   │   └── save_manager.py   # 存档管理器
+│   └── game/                 # 游戏逻辑
+│       └── level_manager.py  # 关卡管理器
+├── tests/                    # 测试文件
+│   ├── test_theme_manager.py
+│   └── test_tutorial_manager.py
+└── themes/                   # 主题文件
+    ├── sunset.json
+    ├── ocean.json
+    ├── minimal.json
+    └── ...
 ```
 
-## 🔧 Features
+## 🎨 主题系统
 
-- ✅ 4x4 game grid
-- ✅ Number merging mechanics
-- ✅ Score tracking
-- ✅ High score persistence
-- ✅ Terminal-based UI
-- ✅ Cross-platform compatibility
-- ✅ Simple controls
+游戏支持多种主题，包括：
 
-## 🛠️ Development
+- **Default** (默认主题)
+- **Sunset** (日落主题)
+- **Ocean** (海洋主题)
+- **Minimal** (简约主题)
 
-### Code Quality
-- Follows PEP 8 style guidelines
-- Comprehensive error handling
-- Modular design for maintainability
+### 自定义主题
 
-### Testing
-Run tests with:
+1. 在游戏中进入"主题自定义"菜单
+2. 点击"创建新主题"
+3. 自定义颜色和方块数值
+4. 保存主题供以后使用
+
+## 📚 教程系统
+
+游戏提供三个级别的教程：
+
+- **入门教程** - 基础游戏规则和操作
+- **进阶教程** - 高级技巧和策略
+- **策略教程** - 专家级游戏建议
+
+## 🏆 成就系统
+
+追踪以下成就：
+
+- 首次达到2048
+- 达到4096、8192等更高数值
+- 单次移动获得高分
+- 连续游戏天数
+
+## 🧪 测试
+
+运行测试套件：
+
 ```bash
-python -m pytest tests/
+python3 tests/test_theme_manager.py
+python3 tests/test_tutorial_manager.py
 ```
 
-### Code Formatting
-Format code with:
+## 🛠️ 开发
+
+### 代码质量
+
+- 遵循PEP 8代码风格指南
+- 模块化设计，易于维护和扩展
+- 完整的错误处理
+- 详细的代码注释
+
+### 添加新主题
+
+1. 在`themes/`目录下创建新的JSON文件
+2. 按照现有主题的格式定义颜色
+3. 重启游戏，新主题将自动加载
+
+### 贡献代码
+
+1. Fork本仓库
+2. 创建功能分支
+3. 进行修改并添加测试
+4. 提交Pull Request
+
+## 🐛 故障排除
+
+### 游戏无法启动
+
+- 确保Python 3.8+已安装
+- 运行 `pip install -r requirements.txt` 安装依赖
+- 检查错误信息并确认Pygame正确安装
+
+### 游戏界面显示异常
+
+- 确保屏幕分辨率支持1280x720
+- 更新显卡驱动
+- 尝试在不同的显示器上运行
+
+### 存档无法保存
+
+- 确保有data/目录的写入权限
+- 检查磁盘空间是否充足
+
+## 📋 系统要求
+
+- **操作系统**: Windows 10+, macOS 10.13+, Linux
+- **Python**: 3.8或更高版本
+- **显卡**: 支持OpenGL 2.0+的显卡
+- **内存**: 至少512MB可用内存
+- **存储**: 至少100MB可用空间
+
+## 📄 开源许可
+
+本项目采用开源许可，欢迎使用和修改。
+
+## 🎉 开始游戏
+
+运行以下命令开始游戏：
+
 ```bash
-black .
+python3 game_launcher.py
 ```
 
-## 📋 Requirements
-
-See [requirements.md](requirements.md) for detailed technical specifications.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## 📄 License
-
-This project is open source. Feel free to use and modify.
-
-## 🎮 Game Screenshots
-
-```
-┌─────────────────────────────────────┐
-│           1024 Game                 │
-├─────────────────────────────────────┤
-│                                     │
-│  ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐     │
-│  │  2  │ │     │ │     │ │     │     │
-│  └─────┘ └─────┘ └─────┘ └─────┘     │
-│                                     │
-│  ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐     │
-│  │     │ │  4  │ │     │ │     │     │
-│  └─────┘ └─────┘ └─────┘ └─────┘     │
-│                                     │
-│  ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐     │
-│  │     │ │     │ │  8  │ │     │     │
-│  └─────┘ └─────┘ └─────┘ └─────┘     │
-│                                     │
-│  ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐     │
-│  │     │ │     │ │     │ │ 16  │     │
-│  └─────┘ └─────┘ └─────┘ └─────┘     │
-│                                     │
-├─────────────────────────────────────┤
-│ Score: 30          High Score: 156  │
-├─────────────────────────────────────┤
-│ Use WASD or Arrow Keys to move      │
-│ Press Q to quit                     │
-└─────────────────────────────────────┘
-```
-
-## 🐛 Troubleshooting
-
-**Game won't start?**
-- Ensure Python 3.8+ is installed
-- Check that all files are in the same directory
-
-**High score not saving?**
-- Ensure write permissions in the data directory
-- Check that `data/high_score.txt` exists
-
-**Display issues?**
-- Try resizing your terminal window
-- Ensure your terminal supports UTF-8
+祝你玩得开心！挑战你的最高分吧！🏆
 
 ---
 
-Happy gaming! 🎉
+*提示：游戏不会在达到2048时结束，继续挑战更高的分数！*
