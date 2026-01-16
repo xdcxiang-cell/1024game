@@ -1,0 +1,6 @@
+{
+  "test": true,
+  "achievement_with_underscores": true,
+  "achievement-with-dashes": true,
+  "achievement.with.dots": true
+}
